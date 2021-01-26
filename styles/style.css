@@ -74,6 +74,11 @@ p {
     margin: var(--gutter);
     color: beige;
 }
+#display-catches {
+    color: beige;
+    font-size: 20px;
+    font-style: bold;
+}
 .gutter-right {
     margin-right: 20px;
 }

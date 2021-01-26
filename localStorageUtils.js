@@ -50,3 +50,19 @@ export function incrementCaught(_id) { // this function takes in a unique number
     setPokeStats(stats);
 
 }
+
+export function clearGame() {
+    localStorage.removeItem('POKESTATS');
+}
+
+export function numberPokesCaught() { 
+
+    const pokemonArray = getPokeStats();
+    let total = 0;
+
+    for (let i = 0; i < pokemonArray.length; i++) {
+        console.log(pokemonArray[i]);
+        total += pokemonArray[i].caught;
+    }
+    return total;
+}
