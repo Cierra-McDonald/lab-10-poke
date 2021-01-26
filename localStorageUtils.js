@@ -1,6 +1,11 @@
 const POKESTATS = 'POKESTATS'; //a magic string
 import { findByUnderScoreId } from './utils.js';
 
+export function setPokeStats(newStats) { //this function sets a new array and puts it in local storage
+    localStorage.setItem(POKESTATS, JSON.stringify(newStats));
+
+} 
+
 export function getPokeStats() {
     let stats = JSON.parse(localStorage.getItem(POKESTATS));
 
@@ -10,11 +15,6 @@ export function getPokeStats() {
     }
     return stats;
 }
-
-export function setPokeStats(newStats) { //this function sets a new array and puts it in local storage
-    localStorage.setItem(POKESTATS, JSON.stringify(newStats));
-
-} 
 
 export function incrementSeen(_id) { // this function takes in a unique number id and searches what is in localStorage
     const stats = getPokeStats();
