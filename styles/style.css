@@ -79,6 +79,11 @@ p {
     font-size: 20px;
     font-style: bold;
 }
+.display-body { 
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, auto);
+    
+}
 .gutter-right {
     margin-right: 20px;
 }
