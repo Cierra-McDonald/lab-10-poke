@@ -1,16 +1,17 @@
 import { pokemon } from '../pokemon.js';
-import { incrementCaught, incrementSeen } from './localStorageUtils.js';
+import { incrementCaught } from '../localStorageUtils.js';
+import { incrementSeen } from './localStorageUtils.js';
 
 
 let numberOfTurns = 0; 
 
-export function getRandomPokemon() {
+export function getRandomPokemon() {// function generates a random number to return a specific pokemon object
     const randonIndex = Math.floor(Math.random() * pokemon.length);
 
     return pokemon[randonIndex];
 }
 
-export function findByUnderScoreId(array, id) { //this is the getById in shopping cart project
+export function findByUnderScoreId(array, id) { //this is the getById in shopping cart project...
     for (let i = 0; i < array.length; i++) {
         const item = array[i];
 
@@ -18,6 +19,7 @@ export function findByUnderScoreId(array, id) { //this is the getById in shoppin
             return item;
         }
     }
+    return
 }
 
 export function setThreePokemon() {
@@ -30,9 +32,9 @@ export function setThreePokemon() {
 
     while (pokeOne._id === pokeTwo._id || pokeTwo._id === pokeThree._id || pokeOne._id === pokeThree._id) {
 
-        let pokeOne = getRandomPokemon();
-        let pokeTwo = getRandomPokemon(); 
-        let pokeThree = getRandomPokemon();
+        pokeOne = getRandomPokemon();
+        pokeTwo = getRandomPokemon(); 
+        pokeThree = getRandomPokemon();
     
     }
 
@@ -41,6 +43,11 @@ export function setThreePokemon() {
     const img3 = renderPokeImage(pokeThree); 
 
     const div = document.getElementById('pokemon'); 
+    //once the pokemon have been randomly selected, we want to
+    //increment the number of times the pokemon were seen
+    incrementSeen(pokeOne._id);
+    incrementSeen(pokeTwo._id);
+    incrementSeen(pokeThree._id);
 
     div.textContent = ''; 
 
@@ -61,7 +68,6 @@ export function renderPokeImage(pokemonItem) {
         } else {
             window.location = 'results';
         }
-
 
     });
     return image; 
