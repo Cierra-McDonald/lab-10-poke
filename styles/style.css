@@ -19,7 +19,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-image: url('../assets/pokemon-background.png');
 }
 
 main {
@@ -53,19 +53,32 @@ header {
     box-shadow: var(--shadow);
 }
 
-footer {
+/* footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
-}
+} */
 
 
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+    color: beige;
+}
+h3 {
+    color: beige;
 }
 
+p {
+    margin: var(--gutter);
+    color: beige;
+}
+#display-catches {
+    color: beige;
+    font-size: 20px;
+    font-style: bold;
+}
 .gutter-right {
     margin-right: 20px;
 }
@@ -78,15 +91,10 @@ header img {
     height: var(--header-height);
 }
 
-
-
 content {
     width: 80%;
 }
 
-p {
-    margin: var(--gutter);
-}
   
 footer {
     position: fixed;
