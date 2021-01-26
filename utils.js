@@ -1,5 +1,5 @@
-import { pokemon } from '../pokemon.js';
-import { incrementCaught } from '../localStorageUtils.js';
+import { pokemon } from './pokemon.js';
+import { incrementCaught } from './localStorageUtils.js';
 import { incrementSeen, numberPokesCaught } from './localStorageUtils.js';
 
 const pokemonCaught = document.getElementById('display-catches');
