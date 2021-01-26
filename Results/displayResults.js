@@ -8,6 +8,7 @@ export function displayResults(pokemonStats, pokemon) { //pokemonStats is the ob
     const pName = document.createElement('p');
     const pImage = new Image();
 
+    innerDiv.classList.add('display-body');
     pSeen.classList.add('all-seen'); //here I am assigning the class for the html elements 
     pCaught.classList.add('all-caught');
     pName.classList.add('name');
@@ -26,8 +27,8 @@ export function displayResults(pokemonStats, pokemon) { //pokemonStats is the ob
 
     innerDiv.append(pImage);
     pImage.src = pokemon.url_image;
-    pImage.width = "175";
-    pImage.height = "250";
+    pImage.width = '175';
+    pImage.height = '250';
 
     return innerDiv; //the complete hamburger that holds the seen, caught, and name values
 
