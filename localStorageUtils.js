@@ -41,7 +41,7 @@ export function incrementCaught(_id) { // this function takes in a unique number
     const poke = findByUnderScoreId(stats, _id); 
    
     if (!poke){
-        console.log('error');
+        return 'error';
     } else {
         poke.caught++;
     }
@@ -61,7 +61,7 @@ export function numberPokesCaught() {
     let total = 0;
 
     for (let i = 0; i < pokemonArray.length; i++) {
-        console.log(pokemonArray[i]);
+      
         total += pokemonArray[i].caught;
     }
     return total;
