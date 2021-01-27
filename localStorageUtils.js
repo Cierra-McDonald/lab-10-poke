@@ -16,13 +16,14 @@ export function getPokeStats() {
     return stats;
 }
 
-export function incrementSeen(_id) { // this function takes in a unique number id and searches what is in localStorage
+export function incrementSeen(_id, pokemonName) { // this function takes in a unique number id and searches what is in localStorage
     const stats = getPokeStats();
     const poke = findByUnderScoreId(stats, _id);
 
     if (!poke) {//if not in localStorage, then initialize a newStat object
         const newStat = {
             _id: _id,
+            name: pokemonName,
             seen: 1, 
             caught: 0,
         };
