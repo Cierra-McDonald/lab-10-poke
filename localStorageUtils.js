@@ -1,5 +1,4 @@
 const POKESTATS = 'POKESTATS'; //a magic string
-import { pokemon } from './pokemon.js';
 import { findByUnderScoreId } from './utils.js';
 
 export function setPokeStats(newStats) { //this function sets a new array and puts it in local storage
