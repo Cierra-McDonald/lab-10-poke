@@ -30,18 +30,17 @@ export function pokeCaughtArray(pokemonStats){
     return pokemoncCaught; 
 }
 
-export function pokeBarColors(pokemonStats){ 
+export function pokeBarColors(pokemonStats){ //this function is a loop that will generate an array of color strings
     let colorArray = [];
 
     for (let i = 0; i < pokemonStats.length; i++) {
-        console.log(generateRGB());
         colorArray.push(generateRGB());
     }
     return colorArray;
     
 }
 
-function generateRGB() {
+function generateRGB() {//this function returns a random string of color
     let r = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
