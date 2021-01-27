@@ -44,9 +44,9 @@ export function setThreePokemon() {
     const div = document.getElementById('pokemon'); 
     //once the pokemon have been randomly selected, we want to
     //increment the number of times the pokemon were seen
-    incrementSeen(pokeOne._id);
-    incrementSeen(pokeTwo._id);
-    incrementSeen(pokeThree._id);
+    incrementSeen(pokeOne._id, pokeOne.pokemon);
+    incrementSeen(pokeTwo._id, pokeTwo.pokemon);
+    incrementSeen(pokeThree._id, pokeThree.pokemon);
     
     div.textContent = ''; 
     
