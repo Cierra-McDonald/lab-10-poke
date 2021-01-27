@@ -2,7 +2,7 @@ import { getPokeStats } from '../localStorageUtils.js';
 import { displayResults } from './displayResults.js';
 import { pokemon } from '../pokemon.js';
 import { findByUnderScoreId } from '../utils.js';
-import { pokeNamesArray, pokeSeenArray, pokeCaughtArray, pokeBarColors} from './mungeData.js';
+import { pokeNamesArray, pokeSeenArray, pokeCaughtArray, pokeBarColors } from './mungeData.js';
 
 // export function getTotalPokeStats() { //this function will display the
     //pokemon seen and pokemon caught from the localStorage to the use 
